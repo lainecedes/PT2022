@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Raleway:wght@400;800&display=swap');
+
+:root {
+--nyanza: #d3f8e2ff;
+--mauve: #e4c1f9ff;
+--amaranth-pink: #f694c1ff;
+--vanilla: #ede7b1ff;
+--uranian-blue: #a9def9ff;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Gloock', serif;
+    margin: 0;
+}
+
+h1 {
+    visibility: hidden;
+}
+
+a, p {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Section 1 */
+
+section:nth-of-type(1) {
+    background-color: var(--nyanza);
+    padding: 0 0 2em 0;
+}
+
+section:nth-of-type(1) h2 { 
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Section 2 */
+
+section:nth-of-type(2) h2 {
+    display: flex;
+    justify-content: center;
+}
+
