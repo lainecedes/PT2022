@@ -25,23 +25,47 @@ a, p {
     font-family: 'Raleway', sans-serif;
 }
 
-/* Section 1 */
-
-section:nth-of-type(1) {
+/* home header */
+.home .header {
     background-color: var(--nyanza);
     padding: 0 0 2em 0;
 }
 
-section:nth-of-type(1) h2 { 
+.home .header h2 { 
     display: flex;
     justify-content: center;
 }
-
 
 /* Section 2 */
 
-section:nth-of-type(2) h2 {
+.home .getting-started h2 {
     display: flex;
     justify-content: center;
 }
+.home .getting-started img {
+    width: 50%;
+}
 
+
+.home .buttons ul {
+    display: flex;
+    margin: 5em 0 0 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.home .buttons li {
+    list-style-type: none;  
+}
+
+.home .buttons img {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    padding: 1em;
+}
+
+.filter-page section:nth-of-type(2) {
+    
+}
