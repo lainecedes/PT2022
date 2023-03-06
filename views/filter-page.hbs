@@ -12,11 +12,53 @@
     <section>
 		<h2>Filters</h2>
 		<form>
-            <fieldset>
+            <fieldset class="age">  {{!-- slider met leeftijd --}}
                 <legend>Ages</legend>
                 <input type="range" id="age" name="age" 
                 min="1" max="99">
             </fieldset>
+
+            <fieldset class='gender'>  {{!-- checkboxes met gender --}}
+                <legend>Gender</legend>
+                  <div>
+                    <input type="checkbox" id="male" name="male">
+                    <label for="male">Male</label>
+                  </div>
+
+                  <div>
+                  <input type="checkbox" id="female" name="female">
+                  <label for="female">Female</label>
+                  </div>
+
+                  <div>
+                  <input type="checkbox" id="non-binary" name="non-binary">
+                  <label for="non-binary">Non-binary</label>
+                  </div>
+            </fieldset>
+
+            <fieldset class='skin-type'> {{!-- checkboxes huid type --}}
+                {{!-- <legend>Skin types</legend>
+                <input type="button" value="Normal">
+                <input type="button" value="Dry">
+                <input type="button" value="Oily">
+                <input type="button" value="Sensitive">
+                <input type="button" value="Combination">
+            </fieldset>
+            
+            {{!-- Fitzpatrick scale erin of eruit? --}}
+            <fieldset class='fitzpatrick'> 
+                <legend>Fitzpatrick Scale</legend>
+                <input type="range" id="age" name="age" 
+                min="1" max="99">
+            </fieldset>
+
+            <fieldset class='fav-skincare'>
+                <legend>Favorite skincare</legend>
+                <input type="range" id="age" name="age" 
+                min="1" max="99">
+            </fieldset> --}}
+
+
         </form>
 	</section>
 </main>
