@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Raleway:wght@400;800&display=swap');
 
+/* Colors */
 :root {
 --nyanza: #d3f8e2ff;
 --mauve: #e4c1f9ff;
 --amaranth-pink: #f694c1ff;
 --vanilla: #ede7b1ff;
 --uranian-blue: #a9def9ff;
+--white: #ffffff;
 }
 
+/* General */
 body {
     margin: 0;
 }
@@ -21,14 +24,14 @@ h1 {
     visibility: hidden;
 }
 
-a, p {
+a, p, legend, label {
     font-family: 'Raleway', sans-serif;
 }
 
 /* home header */
 .header {
-    background-color: var(--nyanza);
-    padding: 0 0 2em 0;
+    background-color: var(--mauve);
+    padding: 0 0 1.5em 0;
 }
 
  .header h2 { 
@@ -37,19 +40,25 @@ a, p {
 }
 
 /* Section 2 */
-
-.home .getting-started h2 {
+.home .getting-started {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-.home .getting-started img {
-    width: 50%;
+    align-items: center;
+    gap: 2em;
 }
 
+.home .getting-started img {
+    width: 75%;
+}
+
+.home .getting-started p {
+    margin: 0 1em 0 1em;
+}
 
 .home .buttons ul {
     display: flex;
-    margin: 5em 0 0 0;
+    margin: 1em 0 0 0;
     padding: 0;
     justify-content: space-evenly;
 }
@@ -59,9 +68,66 @@ a, p {
 }
 
 .home .buttons img {
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 6em;
+    height: 6em;
     padding: 1em;
+}
+
+.filter img {
+    width: 3.5em;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 1em 0 0;
+}
+.filter a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+
+}
+
+/* Filters */
+fieldset {
+    display: flex;
+    flex-direction: row;
+    border: none; 
+    flex-wrap: wrap;
+
+    font-size: 1.2em;
+}
+
+fieldset div {
+    display: flex;
+    border-radius: 1em;
+}
+
+fieldset div label {
+    cursor: pointer;
+    position: relative;
+    border: 3px solid var(--mauve);
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.2em;
+    border-radius: 1em;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+legend {
+    font-weight: 800;
+}
+
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox']:checked ~ label {
+   background: var(--mauve);
+   color: var(--white);
+   font-weight: 800;
 }

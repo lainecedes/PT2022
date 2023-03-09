@@ -1,64 +1,98 @@
-<main class="filter-page">
-    <section class="header"> 
-		<h1>Radiance - Filter</h1>
-		<h2>Filter</h2>
-	</section>
+<body>
+  <main class="filter-page">
+      <section class="header"> 
+      <h1>Radiance - Filter</h1>
+      <h2>Filter</h2>
+    </section>
 
-    <nav class="filter">
-		<a href="#">Filter button</a>
-		<img src="#" alt="Filter icon">
-	</nav>
+      <nav class="filter">
+          <a href="#">Filters</a>
+          <img src="/static/images/noun-filter.svg" alt="Filter icon">
+      </nav>
 
-    <section>
-		<h2>Filters</h2>
-		<form>
-            <fieldset class="age">  {{!-- slider met leeftijd --}}
-                <legend>Ages</legend>
-                <input type="range" id="age" name="age" 
-                min="1" max="99">
-            </fieldset>
+      <section>
+      <form action="/filter-results" method="POST">
+              <fieldset>  {{!-- checkboxes met gender --}}
+                  <legend>Gender</legend>
+                    <div>
+                      <input type="checkbox" id="male" name="gender" value="male">
+                      <label for="male">Male</label>
+                    </div>
 
-            <fieldset class='gender'>  {{!-- checkboxes met gender --}}
-                <legend>Gender</legend>
+                    <div>
+                      <input type="checkbox" id="female" name="gender" value="female">
+                      <label for="female">Female</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="non-binary" name="gender" value="non-binary">
+                      <label for="non-binary">Non-binary</label>
+                    </div>
+              </fieldset>
+
+              <fieldset> {{!-- checkboxes huid type --}}
+                <legend>Skin types</legend>
+                    <div>
+                      <input type="checkbox" id="normal" name="skintype" value="normal">
+                      <label for="normal">Normal</label>
+                    </div>
+
                   <div>
-                    <input type="checkbox" id="male" name="male">
-                    <label for="male">Male</label>
+                    <input type="checkbox" id="dry" name="skintype" value="dry">
+                    <label for="dry">Female</label>
                   </div>
 
                   <div>
-                  <input type="checkbox" id="female" name="female">
-                  <label for="female">Female</label>
+                    <input type="checkbox" id="oily" name="skintype" value="oily">
+                    <label for="oily">Oily</label>
                   </div>
 
                   <div>
-                  <input type="checkbox" id="non-binary" name="non-binary">
-                  <label for="non-binary">Non-binary</label>
+                    <input type="checkbox" id="sensitive" name="skintype" value="sensitive">
+                    <label for="sensitive">Sensitive</label>
                   </div>
-            </fieldset>
 
-            <fieldset class='skin-type'> {{!-- checkboxes huid type --}}
-                {{!-- <legend>Skin types</legend>
-                <input type="button" value="Normal">
-                <input type="button" value="Dry">
-                <input type="button" value="Oily">
-                <input type="button" value="Sensitive">
-                <input type="button" value="Combination">
-            </fieldset>
-            
-            {{!-- Fitzpatrick scale erin of eruit? --}}
-            <fieldset class='fitzpatrick'> 
-                <legend>Fitzpatrick Scale</legend>
-                <input type="range" id="age" name="age" 
-                min="1" max="99">
-            </fieldset>
+                  <div>
+                    <input type="checkbox" id="combination" name="skintype" value="combination">
+                    <label for="combination">Combination</label>
+                  </div>
+              </fieldset>
+              
 
-            <fieldset class='fav-skincare'>
-                <legend>Favorite skincare</legend>
-                <input type="range" id="age" name="age" 
-                min="1" max="99">
-            </fieldset> --}}
+              <fieldset>
+                  <legend>Favorite skincare</legend>
+                  <div>
+                      <input type="checkbox" id="natural" name="skincare" value="natural">
+                      <label for="natural">Natural</label>
+                  </div>
 
+                  <div>
+                    <input type="checkbox" id="korean" name="skincare" value="korean">
+                    <label for="korean">Korean</label>
+                  </div>
 
-        </form>
-	</section>
-</main>
+                  <div>
+                    <input type="checkbox" id="african" name="skincare" value="african">
+                    <label for="african">African</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="western" name="skincare" value="western">
+                    <label for="western">Western</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="vegan" name="skincare" value="vegan">
+                    <label for="vegan">Vegan</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="cruelty-free" name="skincare" value="cruelty-free">
+                    <label for="cruelty-free">Cruelty-free</label>
+                  </div>
+
+                  <input type="submit" value="Search">
+          </form>
+    </section>
+  </main>
+</body>
