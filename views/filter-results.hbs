@@ -1,14 +1,32 @@
 <body>
     <main>
-        <h1>Filter results</h1>
+        <section class="header"> 
+            <h1>Radiance - Results</h1>
+            <h2>Results</h2>
+        </section>
     
         <nav class="filter">
             <a href="#">Filters</a>
             <img src="/static/images/noun-filter.svg" alt="Filter icon">
         </nav>
-        
-        <section id="profiles">
-            
+      
+        <section class="profiles">
+         <ul>
+            {{#each data}}
+                <li><img src="{{this.imgUrl}}" alt="Profile picture of user"></li>
+                <li>
+                    <div class="info">
+                        <h3>{{this.name}}</h3>
+                        <p>{{this.age}}</p>
+                    </div>
+                </li>
+                <div class="filter-info">
+                    <li>{{this.gender}}</li>
+                    <li>{{this.skinType}}</li>
+                    <li>{{this.skinCare}}</li>
+                </div>
+            {{/each}}
+         </ul>
         </section>
     </main>
 </body>

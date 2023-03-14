@@ -1,31 +1,35 @@
 <body>
-  <main class="filter-page">
-      <section class="header"> 
-      <h1>Radiance - Filter</h1>
-      <h2>Filter</h2>
+    <main>
+    <section class="header"> 
+        <h1>Radiance - Filter</h1>
+        <h2>Filter</h2>
     </section>
+        <section>
+            <form method="POST" action="/add-profile-success" enctype="multipart/form-data"> 
+                <fieldset>
+                    <legend>What is your name?</legend>
+                        <input type="text" id="name" name="name">
+                </fieldset>
 
-      <nav class="filter">
-          <a href="#">Filters</a>
-          <img src="/static/images/noun-filter.svg" alt="Filter icon">
-      </nav>
+                <fieldset>
+                    <legend>What is your age?</legend>
+                        <input type="number" id="age" name="age" min="0" max="99">
+                </fieldset>
 
-      <section>
-       <form method="POST" action="/filter-results"> 
-              <fieldset>  {{!-- checkboxes met gender --}}
-                  <legend>Gender</legend>
-                      <input type="radio" id="male" name="gender" value="male">
-                      <label for="male">Male</label>
+                <fieldset>
+                    <legend>What is your gender?</legend>
+                         <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
                     
-                      <input type="radio" id="female" name="gender" value="female">
-                      <label for="female">Female</label>
-                 
-                      <input type="radio" id="non-binary" name="gender" value="non-binary">
-                      <label for="non-binary">Non-binary</label>
-              </fieldset>
+                        <input type="radio" id="non-binary" name="gender" value="non-binary">
+                        <label for="non-binary">Non-binary</label>
+                </fieldset>
 
-              <fieldset> {{!-- checkboxes huid type --}}
-                  <legend>Skin types</legend>
+                <fieldset> {{!-- checkboxes huid type --}}
+                  <legend>What is your skin type?</legend>
                       <input type="radio" id="normal" name="skinType" value="normal">
                       <label for="normal">Normal</label>
 
@@ -44,7 +48,7 @@
               
 
               <fieldset>
-                <legend>Favorite skincare</legend>
+                <legend>What is your favorite skincare?</legend>
                       <input type="radio" id="natural" name="skinCare" value="natural">
                       <label for="natural">Natural</label>
                  
@@ -63,8 +67,9 @@
                       <input type="radio" id="cruelty-free" name="skinCare" value="cruelty-free">
                       <label for="cruelty-free">Cruelty-free</label>
               </fieldset>
-                  <input type="submit" value="Search">
-          </form>
-    </section>
-  </main>
+              <input type="submit" value="Add your profile">
+            </form>
+        </section>
+
+    </main>
 </body>

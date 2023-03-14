@@ -24,8 +24,12 @@ h1 {
     visibility: hidden;
 }
 
-a, p, legend, label {
+a, p, legend, label, li {
     font-family: 'Raleway', sans-serif;
+}
+
+li {
+    font-weight: 800;
 }
 
 /* home header */
@@ -100,12 +104,7 @@ fieldset {
     font-size: 1.2em;
 }
 
-fieldset div {
-    display: flex;
-    border-radius: 1em;
-}
-
-fieldset div label {
+label {
     cursor: pointer;
     position: relative;
     border: 3px solid var(--mauve);
@@ -115,6 +114,7 @@ fieldset div label {
     border-radius: 1em;
     background: var(--white);
     transition: 0.3s;
+    
 }
 
 legend {
@@ -122,12 +122,72 @@ legend {
 }
 
 
-input[type='checkbox'] {
-    display: none;
+input[type='radio'] {
+    display: none;    
 }
 
-input[type='checkbox']:checked ~ label {
-   background: var(--mauve);
-   color: var(--white);
-   font-weight: 800;
+input[type='radio']:checked + label {
+    background: var(--mauve);
+    color: var(--white);
+    font-weight: 800;
+}
+
+/* Results page */
+
+profiles ul li:nth-of-type(1){
+    display:flex;
+    flex-direction: column;
+}
+
+/* .photo-card {
+    display:flex;
+    flex-direction: column;
+} */
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.profiles ul {
+    position: relative;
+    left: 2em;
+}
+
+.profiles img {
+    width: 70%;
+}
+
+.profiles .info {
+    position: relative;
+    background-color: beige;
+    bottom: 1em;
+    padding: 0.7em;
+    width: 65%;
+    height: 6em;
+}
+.profiles .info p {
+    margin: 0;
+
+}
+.profiles li {
+    list-style-type: none;
+}
+
+.filter-info {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -4.3em;
+}
+.filter-info li {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 0.3em;
+    padding: 0.2em;
 }
