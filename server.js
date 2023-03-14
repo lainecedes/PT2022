@@ -60,18 +60,17 @@ app.get('/', (req, res) => {
   }
   let url = 'https://api.api-ninjas.com/v1/quotes?category=beauty'
   
-  fetch(url, options)
+  fetch(url, options) // fetch is async but api is await, fixed issue where data wasn't seen in view (source: Ivo Nijhuis)
           .then(res => res.json()) // parse response as JSON
           .then(data => {
             quote = data;
             console.log(quote);
-            
+            res.render('home.hbs', {title: 'Radiance - Home', quote: quote[0].quote, author: quote[0].author}); 
           })
           .catch(err => {
               console.log(`error ${err}`)
     }); 
 
-    res.render('home.hbs', {title: 'Radiance - Home', data: quote}); //
 })
 
 
