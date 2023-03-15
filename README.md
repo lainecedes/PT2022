@@ -26,13 +26,15 @@ To install this project:
 <code>$ npm start</code>
 
 
-
 ## Templating view engine
 This app uses the templating engine express-handlebars. It works just like Handlebars, but better. It's easy to use, has good documentation and is integrated with the npm module express.
 
 
 # Database
-This app uses the database MongoDB Atlas. MongoDB Atlas is a simplified NoSQL database that runs in the cloud.
+This app uses the database MongoDB Atlas. MongoDB Atlas is a simplified NoSQL database that runs in the cloud. For more information, browse the [Database structure](https://github.com/lainecedes/PT2023/wiki/database) page on the wiki.
 
 # License
 [MIT License](https://github.com/lainecedes/PT2023/blob/main/LICENSE.md)
+
+# Author
+Elaine Wilberforce
