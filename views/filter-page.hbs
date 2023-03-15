@@ -5,10 +5,10 @@
       <h2>Filter</h2>
     </section>
 
-      <nav class="filter">
-          <a href="#">Filters</a>
-          <img src="/static/images/noun-filter.svg" alt="Filter icon">
-      </nav>
+       <nav class="filter">
+                <a href="/"><img src="/static/images/noun-return.png" alt='Go back'></a>
+                <a href="/filter-page"><img src="/static/images/noun-filter.png" alt="Filter icon"></a>
+        </nav>
 
       <section>
        <form method="POST" action="/filter-results"> 
@@ -63,7 +63,7 @@
                       <input type="radio" id="cruelty-free" name="skinCare" value="cruelty-free">
                       <label for="cruelty-free">Cruelty-free</label>
               </fieldset>
-                  <input type="submit" value="Search">
+                  <input class="submit" type="submit" value="Search">
           </form>
     </section>
   </main>

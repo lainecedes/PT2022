@@ -1,27 +1,18 @@
 <body>
     <main>
+        <nav class="filter">
+            <a href="/"><img src="/static/images/noun-return.png" alt='Go back'></a>
+            <a href="/filter-page"><img src="/static/images/noun-filter.png" alt="Filter icon"></a>
+        </nav>
         <section class="header"> 
-            <h1>Radiance - Filter</h1>
+            <h1>Radiance - Profile added</h1>
             <h2>Success 🌸</h2>
         </section>
 
-        <section>
+        <section class="add-success">
             <h2>You just made a profile!</h2>
-            <p>Here are the details:</p>
-            {{!-- <ul>
-            {{#each data}}
-                <li><img src="{{this.imgUrl}}" alt="Profile picture of user"></li>
-                <li>
-                    <div class="info">
-                        <h3>{{this.name}}</h3>
-                        <p>{{this.age}}</p>
-                    </div>
-                </li>
-                <li>{{this.gender}}</li>
-                <li>{{this.skinType}}</li>
-                <li>{{this.skinCare}}</li>
-            {{/each}}
-         </ul> --}}
+            <img src="/static/images/radiance-homeart.svg" alt="Empty state image">
+            <p>Look up your profile with the filters above.</p>
         </section>
     </main>
 </body>

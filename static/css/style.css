@@ -43,6 +43,7 @@ li {
     justify-content: center;
 }
 
+
 /* Section 2 */
 .home .getting-started {
     display: flex;
@@ -58,40 +59,66 @@ li {
 
 .home .getting-started p {
     margin: 0 1em 0 1em;
+    text-align: center;
 }
 
-.home .buttons ul {
+.profile-button {
     display: flex;
+    justify-content: center;
+}
+.profile-button a {
+    border: 3px solid var(--mauve);
+    border-radius: 1em;
+    padding: 0.5em;
     margin: 1em 0 0 0;
-    padding: 0;
-    justify-content: space-evenly;
-}
-
-.home .buttons li {
-    list-style-type: none;  
-}
-
-.home .buttons img {
-    width: 6em;
-    height: 6em;
-    padding: 1em;
-}
-
-.filter img {
-    width: 3.5em;
-}
-
-.filter {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding: 0 1em 0 0;
-}
-.filter a {
     text-decoration: none;
     color: inherit;
     font-weight: 800;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+.profile-button a:hover {
+    background: var(--mauve);
+    color: white;
+}
 
+
+.filter {
+    display: flex;
+    position: absolute;
+    top: 0.8em;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 1em 0 1em;
+}
+
+.filter a {
+    width: 14%;
+    display: flex;
+    justify-content: center;
+}
+
+.filter img {
+    width: 100%;
+}
+
+/* Quote */
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2em 0 3em 0;
+}
+
+.quote h3 {
+    font-size: 1em;
+}
+
+.quote p {
+    font-size: 0.9em;
+    order: -1;
+    margin: 0 1em 0.5em 1em;
 }
 
 /* Filters */
@@ -132,6 +159,28 @@ input[type='radio']:checked + label {
     font-weight: 800;
 }
 
+/* Form submit button, issue with selector so used class */
+.submit {
+    border: 3px solid var(--mauve);
+    border-radius: 1em;
+    background-color: var(--mauve);
+    position: relative;
+    cursor: pointer;
+    left: 1em;
+    top: 1.2em;
+    padding: 0.5em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    font-weight: 800;
+    transition: 0.3s;
+}
+.submit:hover{
+    color: white;
+}
+ form {
+    margin: 2.5em 0 0 0;
+ }
+
 /* Results page */
 
 profiles ul li:nth-of-type(1){
@@ -139,16 +188,11 @@ profiles ul li:nth-of-type(1){
     flex-direction: column;
 }
 
-/* .photo-card {
-    display:flex;
-    flex-direction: column;
-} */
 
 .profiles {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
 }
 
 .profiles ul {
@@ -190,4 +234,44 @@ profiles ul li:nth-of-type(1){
     border: 1px solid black;
     margin: 0.3em;
     padding: 0.2em;
+}
+
+/* 404 page */
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 2.5em 0 0 0;
+}
+
+.error img {
+    width: 75%;
+}
+
+.error p {
+    margin: 0 1em 0 1em;
+}
+.error p:nth-of-type(2) {
+    font-size: 0.7em;
+    
+}
+
+.add-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 2.5em 0 0 0;
+}
+
+.add-success img {
+    width: 75%;
+}
+
+.add-success p {
+    margin: 0 1em 0 1em;
 }
