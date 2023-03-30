@@ -1,75 +1,97 @@
 <body>
-    <main>
-    <section class="header"> 
-        <h1>Radiance - Add profile</h1>
-        <h2>Add your profile</h2>
+  <main>
+    <section class="header">
+      <h1>Radiance - Add profile</h1>
+      <h2>Add your profile</h2>
     </section>
-        <section>
-            <form method="POST" action="/add-profile-success" enctype="multipart/form-data"> 
-                <fieldset>
-                    <legend>What is your name?</legend>
-                        <input type="text" id="name" name="name">
-                </fieldset>
+    <section>
+      <form id="form" method="POST" action="/add-profile-success" enctype="multipart/form-data">
+        <fieldset>
+          <legend>What is your name?</legend>
+          <input type="text" id="name" name="name" required />
+          <div id="form-error"></div>
+        </fieldset>
 
-                <fieldset>
-                    <legend>What is your age?</legend>
-                        <input type="number" id="age" name="age" min="0" max="99">
-                </fieldset>
+        <fieldset>
+          <legend>What is your age?</legend>
+          <input type="number" id="age" name="age" min="0" max="99" required />
+        </fieldset>
 
-                <fieldset>
-                    <legend>What is your gender?</legend>
-                         <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                    
-                        <input type="radio" id="non-binary" name="gender" value="non-binary">
-                        <label for="non-binary">Non-binary</label>
-                </fieldset>
+        <fieldset>
+          <legend>What is your gender?</legend>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
 
-                <fieldset> {{!-- checkboxes huid type --}}
-                  <legend>What is your skin type?</legend>
-                      <input type="radio" id="normal" name="skinType" value="normal">
-                      <label for="normal">Normal</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
 
-                      <input type="radio" id="dry" name="skinType" value="dry">
-                      <label for="dry">Dry</label>
+          <input
+            type="radio"
+            id="non-binary"
+            name="gender"
+            value="non-binary"
+          />
+          <label for="non-binary">Non-binary</label>
+        </fieldset>
 
-                      <input type="radio" id="oily" name="skinType" value="oily">
-                      <label for="oily">Oily</label>
-                 
-                      <input type="radio" id="sensitive" name="skinType" value="sensitive">
-                      <label for="sensitive">Sensitive</label>
+        <fieldset>
+          {{! checkboxes huid type }}
+          <legend>What is your skin type?</legend>
+          <input type="radio" id="normal" name="skinType" value="normal" />
+          <label for="normal">Normal</label>
 
-                    <input type="radio" id="combination" name="skinType" value="combination">
-                    <label for="combination">Combination</label>
-              </fieldset>
-              
+          <input type="radio" id="dry" name="skinType" value="dry" />
+          <label for="dry">Dry</label>
 
-              <fieldset>
-                <legend>What is your favorite skincare?</legend>
-                      <input type="radio" id="natural" name="skinCare" value="natural">
-                      <label for="natural">Natural</label>
-                 
-                      <input type="radio" id="korean" name="skinCare" value="korean">
-                      <label for="korean">Korean</label>
+          <input type="radio" id="oily" name="skinType" value="oily" />
+          <label for="oily">Oily</label>
 
-                      <input type="radio" id="african" name="skinCare" value="african">
-                      <label for="african">African</label>
-                  
-                      <input type="radio" id="western" name="skinCare" value="western">
-                      <label for="western">Western</label>
-                  
-                      <input type="radio" id="vegan" name="skinCare" value="vegan">
-                      <label for="vegan">Vegan</label>
-                
-                      <input type="radio" id="cruelty-free" name="skinCare" value="cruelty-free">
-                      <label for="cruelty-free">Cruelty-free</label>
-              </fieldset>
-              <input class="submit" type="submit" value="Add your profile">
-            </form>
-        </section>
+          <input
+            type="radio"
+            id="sensitive"
+            name="skinType"
+            value="sensitive"
+          />
+          <label for="sensitive">Sensitive</label>
 
-    </main>
+          <input
+            type="radio"
+            id="combination"
+            name="skinType"
+            value="combination"
+          />
+          <label for="combination">Combination</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>What is your favorite skincare?</legend>
+          <input type="radio" id="natural" name="skinCare" value="natural" />
+          <label for="natural">Natural</label>
+
+          <input type="radio" id="korean" name="skinCare" value="korean" />
+          <label for="korean">Korean</label>
+
+          <input type="radio" id="african" name="skinCare" value="african" />
+          <label for="african">African</label>
+
+          <input type="radio" id="western" name="skinCare" value="western" />
+          <label for="western">Western</label>
+
+          <input type="radio" id="vegan" name="skinCare" value="vegan" />
+          <label for="vegan">Vegan</label>
+
+          <input
+            type="radio"
+            id="cruelty-free"
+            name="skinCare"
+            value="cruelty-free"
+          />
+          <label for="cruelty-free">Cruelty-free</label>
+        </fieldset>
+        <input class="submit" type="submit" value="Add your profile" />
+      </form>
+    </section>
+
+  </main>
+   <script src="/static/script.js"></script> 
 </body>
