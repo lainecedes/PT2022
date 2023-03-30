@@ -275,3 +275,14 @@ profiles ul li:nth-of-type(1){
 .add-success p {
     margin: 0 1em 0 1em;
 }
+
+
+/* Form validation */
+
+#form-error {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 0.8em;
+    margin: 1em 0 0 0;
+    color: red;
+}
